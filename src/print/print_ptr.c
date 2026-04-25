@@ -6,7 +6,7 @@
 /*   By: abdualsh <abdualsh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:30:03 by abdualsh          #+#    #+#             */
-/*   Updated: 2026/04/25 12:20:01 by abdualsh         ###   ########.fr       */
+/*   Updated: 2026/04/25 12:59:22 by abdualsh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	print_ptr_val(unsigned long addr, t_fmt *f)
 	int		res;
 
 	if (addr == 0)
-		return (print_with_padding(f, 0, "0x", "0"));
+		return (print_with_padding(f, 0, NULL, "(nil)"));
 	digits = ft_xtoa(addr, 0);
 	if (!digits)
 		return (-1);
